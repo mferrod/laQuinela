@@ -1,4 +1,4 @@
-package com.politecnicomalaga.NasdaqOilPrices.Model;
+package com.politecnicomalaga.laQuinelaDeMariano.Model;
 
 import android.view.View;
 import android.widget.TextView;

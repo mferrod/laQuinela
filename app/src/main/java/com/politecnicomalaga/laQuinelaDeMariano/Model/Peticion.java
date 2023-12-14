@@ -1,9 +1,9 @@
-package com.politecnicomalaga.NasdaqOilPrices.Model;
+package com.politecnicomalaga.laQuinelaDeMariano.Model;
 
 import android.os.Handler;
 import android.os.Looper;
 
-import com.politecnicomalaga.NasdaqOilPrices.Controller.MainController;
+import com.politecnicomalaga.laQuinelaDeMariano.Controller.MainController;
 
 import java.io.IOException;
 
@@ -56,7 +56,7 @@ public class Peticion {
                      @Override
                      public void run() {
                          // Code will be executed on the main thread
-                         MainController.getSingleton().setDataFromNasdaq(respuesta);
+                         MainController.getSingleton().setDataFromQuiniela(respuesta);
                      }
                  });
              }
@@ -70,17 +70,11 @@ public class Peticion {
                      @Override
                      public void run() {
                          // Code will be executed on the main thread
-                         MainController.getSingleton().setDataFromNasdaq("");
-                         MainController.getSingleton().setErrorFromNasdaq(respuesta);
+                         MainController.getSingleton().setDataFromQuiniela("");
+                         MainController.getSingleton().setErrorFromQuiniela(respuesta);
                      }
                  });
              }
          });
-
-
-
-
-
     }
-
 }

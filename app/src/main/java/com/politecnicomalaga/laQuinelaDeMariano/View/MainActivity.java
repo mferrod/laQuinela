@@ -1,4 +1,4 @@
-package com.politecnicomalaga.NasdaqOilPrices.View;
+package com.politecnicomalaga.laQuinelaDeMariano.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.politecnicomalaga.NasdaqOilPrices.Model.JornadaAdapter;
-import com.politecnicomalaga.NasdaqOilPrices.Controller.MainController;
-import com.politecnicomalaga.NasdaqOilPrices.Model.Partido;
+import com.politecnicomalaga.laQuinelaDeMariano.Model.JornadaAdapter;
+import com.politecnicomalaga.laQuinelaDeMariano.Controller.MainController;
+import com.politecnicomalaga.laQuinelaDeMariano.Model.Partido;
 import com.politecnicomalaga.NasdaqOilPrices.R;
 
 import java.util.LinkedList;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         // Give the RecyclerView a default layout manager.
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        MainController.getSingleton().requestDataFromNasdaq();
+        MainController.getSingleton().requestDataFromQuiniela();
 
         MainActivity.myActiveActivity = this;
         MainController.setActivity(this);
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void accessData() {
         //Get data from servers throgh controller-model classes
-        List<Partido> nuevaLista = MainController.getSingleton().getDataFromNasdaq();
+        List<Partido> nuevaLista = MainController.getSingleton().getDataFromQuiniela();
 
         //Put data in adapter
         mList.clear();

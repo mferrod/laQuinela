@@ -1,9 +1,9 @@
-package com.politecnicomalaga.NasdaqOilPrices.Controller;
+package com.politecnicomalaga.laQuinelaDeMariano.Controller;
 
-import com.politecnicomalaga.NasdaqOilPrices.Model.Partido;
-import com.politecnicomalaga.NasdaqOilPrices.Model.Peticion;
-import com.politecnicomalaga.NasdaqOilPrices.Model.Respuesta;
-import com.politecnicomalaga.NasdaqOilPrices.View.MainActivity;
+import com.politecnicomalaga.laQuinelaDeMariano.Model.Partido;
+import com.politecnicomalaga.laQuinelaDeMariano.Model.Peticion;
+import com.politecnicomalaga.laQuinelaDeMariano.Model.Respuesta;
+import com.politecnicomalaga.laQuinelaDeMariano.View.MainActivity;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -31,18 +31,18 @@ public class MainController {
     }
 
     //To send data to view
-    public List<Partido> getDataFromNasdaq() {
+    public List<Partido> getDataFromQuiniela() {
         return this.dataRequested;
     }
 
     //Called from the view
-    public void requestDataFromNasdaq() {
+    public void requestDataFromQuiniela() {
         Peticion p = new Peticion();
         p.requestData(DATA_URL);
     }
 
     //Called when onResponse is OK
-    public void setDataFromNasdaq(String json) {
+    public void setDataFromQuiniela(String json) {
 
         Respuesta answer = new Respuesta(json);
         dataRequested = answer.getData();
@@ -50,7 +50,7 @@ public class MainController {
         MainController.activeActivity.accessData();
     }
 
-    public void setErrorFromNasdaq(String error) {
+    public void setErrorFromQuiniela(String error) {
 
         //Load data on the list
         MainController.activeActivity.errorData(error);

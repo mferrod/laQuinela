@@ -1,4 +1,4 @@
-package com.politecnicomalaga.NasdaqOilPrices.Model;
+package com.politecnicomalaga.laQuinelaDeMariano.Model;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;

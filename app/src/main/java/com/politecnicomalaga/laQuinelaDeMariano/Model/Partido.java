@@ -1,4 +1,4 @@
-package com.politecnicomalaga.NasdaqOilPrices.Model;
+package com.politecnicomalaga.laQuinelaDeMariano.Model;
 
 public class Partido {
     private String equipo1;
